@@ -1,0 +1,189 @@
+/* .background {
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vw / 4);
+    max-height: 200px;
+    background-image: url('../images/AdobeStock_1127641784.png');
+    background-size: cover;
+    background-position: center bottom;
+    /* transform: rotateX(60deg); */
+
+
+    .background-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: calc(100vw / 4);
+        max-height: 200px;
+        z-index: -1;
+        overflow: hidden;
+    }
+    
+    .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200%;
+        height: calc(100vw / 4); 
+        max-height: 200px;
+        background-image: url('/images/AdobeStock_1127641784.png');
+        background-size: 50% 100%; 
+        background-repeat: repeat-x;
+        animation: slide 25s linear infinite;
+    }
+    
+    @keyframes slide {
+        from {
+            transform: translateX(-50%);
+        }
+        to {
+            transform: translateX(0); 
+        }
+    }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    background: #d3d3d3;
+}
+
+/* .container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 20vw);
+    grid-template-rows: repeat(2, 20vw);
+    transform-style: preserve-3d;
+    transform: rotateX(1deg);
+} */
+
+/* .container{
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    /*space-around spaces out the ends and gaps evenly*/
+    /* flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    border: 1px solid rgb(187, 60, 60);
+    position: absolute;
+    overflow: hidden;
+} */ 
+
+.container {
+    width: 80vh;  /* Fill available width */
+    max-width: 630px; /* Maximum size */
+    aspect-ratio: 1; /* Keep square shape */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Even spacing between tiles */
+    padding: 10px;
+    border: 1px solid rgb(187, 60, 60);
+}
+
+
+.tile {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    min-width: 0;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* .tile {
+    width: 20vw;
+    height: 20vw;
+    background: rgb(228, 176, 176);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0rem 1rem 1.5rem 0rem rgba(233, 230, 21, 0.308);
+    transition: transform 0.2s ease;
+    position: relative;
+} */
+
+audio {
+    display: none;
+}
+
+.emoji {
+    font-size: min(13vw, 8rem);
+    transition: transform 0.5s ease;
+}
+
+.tile:hover {
+    transform: translateY(-10px);
+}
+
+.happy:hover {
+    animation: bounce .5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-20px) rotate(-10deg); }
+    75% { transform: translateY(-20px) rotate(10deg);}
+}
+
+.excited:hover {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(15deg); }
+    75% { transform: rotate(-15deg); }
+}
+
+.love:hover {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { 
+        transform: scale(1) rotateX(0deg); 
+    }
+    50% { 
+        transform: scale(1.15) rotateY(-20deg) rotateX(-10deg); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
+}
+
+.party:hover {
+    transform-origin: bottom left;
+    animation: cornerGrow 1s infinite linear;
+}
+
+@keyframes cornerGrow {
+    from { 
+        transform: skew(0deg, 0deg) scale(1); 
+    }
+    50% {
+        transform: skew(10deg, 10deg) scale(1.12);
+    }
+    75% { 
+        transform: skew(-8deg, -8deg) scale(1.05); 
+    }
+    100% {
+        transform: skew(0deg, 0deg) scale(1);
+    }
+}
+
+

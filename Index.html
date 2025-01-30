@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Fun</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+    <!-- <div class="background"></div> -->
+
+    <div class="background-wrapper">
+        <div class="background"></div>
+    </div>
+
+    <div class="container">
+        <div class="tile" onmouseover="document.getElementById('sound1').play()">
+            <span class="emoji happy">😊</span>
+            <audio id="sound1" src="audio/Laugh.mp3" preload="auto"></audio>
+        </div>
+        <div class="tile" onmouseover="document.getElementById('sound2').play()">
+            <span class="emoji excited">🤩</span>
+            <audio id="sound2" src="audio/Shine.wav" preload="auto"></audio>
+        </div>
+        <div class="tile" onmouseover="document.getElementById('sound3').play()">
+            <span class="emoji love">🥰</span>
+            <audio id="sound3" src="audio/love.mp3" preload="auto"></audio>
+        </div>
+        <div class="tile" onmouseover="document.getElementById('sound4').play()">
+            <span class="emoji party">🎉</span>
+            <audio id="sound4" src="audio/horn.mp3" preload="auto"></audio>
+        </div>
+    </div>
+</body>
+</html>
